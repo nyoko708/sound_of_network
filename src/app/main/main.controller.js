@@ -28,6 +28,10 @@
       vm.classAnimation = '';
     }
 
+    function getUserList() {
+
+    }
+
     function getWebDevTec() {
       vm.awesomeThings = webDevTec.getTec();
 

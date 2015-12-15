@@ -53,7 +53,7 @@
 
       vm.contributors = [];
 
-      activate();
+      //activate();
 
       function activate() {
         return getContributors().then(function() {
