@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-      .module('web')
+      .module('sound_of_network')
       .service('webDevTec', webDevTec);
 
   /** @ngInject */

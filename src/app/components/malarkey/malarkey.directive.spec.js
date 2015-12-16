@@ -12,7 +12,7 @@
     var vm;
     var el;
 
-    beforeEach(module('web'));
+    beforeEach(module('sound_of_network'));
     beforeEach(inject(function($compile, $rootScope, githubContributor, $q, _$log_) {
       $log = _$log_;
 

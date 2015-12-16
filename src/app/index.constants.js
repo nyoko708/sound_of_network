@@ -3,7 +3,7 @@
   'use strict';
 
   angular
-    .module('web')
+    .module('sound_of_network')
     .constant('malarkey', malarkey)
     .constant('moment', moment);
 
