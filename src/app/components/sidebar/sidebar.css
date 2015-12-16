@@ -1,0 +1,11 @@
+.sidebar {
+  color: white;
+  background-color: #D6D6D6;
+}
+
+.sidebar a:link {
+  color: #044F9A
+}
+
+.acme-sidebar-text {
+}
