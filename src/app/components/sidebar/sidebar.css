@@ -1,13 +1,18 @@
 .sidebar {
-  color: white;
-  background-color: #D6D6D6;
-  padding-left: 0px;
-  padding-right: 0px;
+  background-color: #E1E8EC;
+  position: fixed;
+  top: 60px;
+  left: 0px;
+  bottom: 0px;
+  z-index: 0;
+  display: block;
+
 }
 
 .sidebar a:link {
   color: #044F9A
 }
+
 
 .acme-sidebar-text {
 }
