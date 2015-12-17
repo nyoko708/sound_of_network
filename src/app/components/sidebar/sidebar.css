@@ -1,4 +1,6 @@
 .sidebar {
+  padding-right: 0px;
+  padding-left: 0px;
   background-color: #E1E8EC;
   position: fixed;
   top: 60px;
@@ -6,11 +8,11 @@
   bottom: 0px;
   z-index: 0;
   display: block;
-
+  font-size: 16px;
 }
 
-.sidebar a:link {
-  color: #044F9A
+.sidebar a {
+  color: #000000;
 }
 
 
