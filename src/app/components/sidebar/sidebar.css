@@ -1,6 +1,8 @@
 .sidebar {
   color: white;
   background-color: #D6D6D6;
+  padding-left: 0px;
+  padding-right: 0px;
 }
 
 .sidebar a:link {

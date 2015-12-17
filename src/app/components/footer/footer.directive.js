@@ -3,17 +3,17 @@
 
   angular
     .module('sound_of_network')
-    .directive('acmeNavbar', acmeNavbar);
+    .directive('acmeFooter', acmeFooter);
 
   /** @ngInject */
-  function acmeNavbar() {
+  function acmeFooter() {
     var directive = {
       restrict: 'E',
-      templateUrl: 'app/components/navbar/navbar.html',
+      templateUrl: 'app/components/footer/footer.html',
       scope: {
           creationDate: '='
       },
-      controller: NavbarController,
+      controller: FooterController,
       controllerAs: 'vm',
       bindToController: true
     };
@@ -21,7 +21,7 @@
     return directive;
 
     /** @ngInject */
-    function NavbarController() {
+    function FooterController() {
     }
   }
 
