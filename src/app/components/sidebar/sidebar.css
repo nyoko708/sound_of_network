@@ -1,7 +1,7 @@
 .sidebar {
   padding-right: 0px;
   padding-left: 0px;
-  background-color: #E1E8EC;
+  background-color: #DEDAAA;
   position: fixed;
   top: 60px;
   left: 0px;
@@ -32,12 +32,20 @@
 }
 
 .link-section {
-  text-align: center;
   font-size: 20px;
 }
 
 .link-section a {
   padding-left: 10px;
+}
+
+.link-section-icon {
+  padding-right: 10px;
+  padding-left: 30px;
+}
+
+.color-orange {
+ color: #DA6A03;
 }
 
 .acme-sidebar-text {
