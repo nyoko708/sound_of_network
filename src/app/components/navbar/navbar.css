@@ -1,3 +1,21 @@
+.navbar-brand {
+  font-size: 30px;
+  padding-top: 20px;
+}
+
+.navbar-inverse .navbar-brand {
+  color: gold;
+}
+
+.navbar-inverse {
+  background-color: #353D40;
+  border-color: #080808;
+}
+
+.navbar-nav > li > a {
+  padding-top: 20px;
+}
+
 .icon-size-xl {
   font-size: 25px;
 }
@@ -8,6 +26,10 @@
 
 .navbar {
   margin-bottom: 0px;
+}
+
+.nav {
+  font-size: 18px;
 }
 
 .acme-navbar-text {
