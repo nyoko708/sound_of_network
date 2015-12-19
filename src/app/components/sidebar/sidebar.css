@@ -19,6 +19,7 @@
 .nav-border {
   border-top: 1px solid #bbb;
   border-bottom: 1px solid #fff;
+  margin-top: 0px;
 }
 
 .user-section {
@@ -32,6 +33,11 @@
 
 .link-section {
   text-align: center;
+  font-size: 20px;
+}
+
+.link-section a {
+  padding-left: 10px;
 }
 
 .acme-sidebar-text {
