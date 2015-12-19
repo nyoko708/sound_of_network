@@ -15,8 +15,24 @@
   color: #000000;
 }
 
+
+.nav-border {
+  border-top: 1px solid #bbb;
+  border-bottom: 1px solid #fff;
+}
+
 .user-section {
+  padding: 10px;
+}
+
+.user-section-img img {
+  width: 100px;
+  height: 100px;
+}
+
+.link-section {
   text-align: center;
 }
+
 .acme-sidebar-text {
 }
