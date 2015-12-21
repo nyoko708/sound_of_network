@@ -7,12 +7,16 @@
   <div class="jumbotron text-center">
     <h1>May the Music be with you.</h1>
     <p class="lead">
-      <img src="assets/images/icon_128.png" alt="sound of network icon"><br>
+    <button type="button" class="btn btn-success btn-lg">Let's sign in</button>
+    <button type="button" class="btn btn-info btn-lg">Login</button>
     </p>
     <p>
       Social Matching with <acme-malarkey extra-values="['Musician', 'Sound Engineer', 'Producer', 'Livehouse Owner']"></acme-malarkey>.
     </p>
   </div>
+
+  <h1>注目のプロジェクト</h1>
+  <hr>
 
   <div class="row">
     <div class="col-sm-6 col-md-4" ng-repeat="awesomeThing in main.awesomeThings | orderBy:'rank'">

@@ -35,6 +35,16 @@
     function getWebDevTec() {
       vm.awesomeThings = webDevTec.getTec();
 
+      console.log(vm.awesomeThings);
+
+      vm.awesomeThings[vm.awesomeThings.length] = {   $$hashKey: "",
+                                                      description: "aaa is project. desc desc desc.",
+                                                      logo: "angular.png",
+                                                      rank: 1,
+                                                      title: "AAAAAA Project",
+                                                      url: "https://angularjs.org/"
+                                                  }
+
       angular.forEach(vm.awesomeThings, function(awesomeThing) {
         awesomeThing.rank = Math.random();
       });
