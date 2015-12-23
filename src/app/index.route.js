@@ -25,6 +25,12 @@
         templateUrl: 'app/mypage/mypage.html',
         controller: 'MyPageController',
         controllerAs: 'mypage'
+      })
+      .state('project', {
+        url: '/project',
+        templateUrl: 'app/project/project.html',
+        controller: 'ProjectController',
+        controllerAs: 'project'
       });
 
     $urlRouterProvider.otherwise('/');

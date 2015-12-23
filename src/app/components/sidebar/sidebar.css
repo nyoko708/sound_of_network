@@ -2,10 +2,12 @@
   padding-right: 0px;
   padding-left: 0px;
   background-color: #DEDAAA;
-  position: fixed;
-  top: 60px;
-  left: 0px;
+  position: relative;
+  width: 100%;
+  top: 0px;
   bottom: 0px;
+  padding-bottom: 32768px;
+  margin-bottom: -32768px;
   z-index: 0;
   display: block;
   font-size: 16px;
@@ -14,7 +16,6 @@
 .sidebar a {
   color: #000000;
 }
-
 
 .nav-border {
   border-top: 1px solid #bbb;
@@ -31,8 +32,16 @@
   height: 100px;
 }
 
-.link-section {
+.search-section {
+  padding: 10px;
+}
+
+.search-icon {
   font-size: 20px;
+}
+
+.link-section {
+  font-size: 16px;
 }
 
 .link-section a {
