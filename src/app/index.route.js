@@ -26,11 +26,23 @@
         controller: 'MyPageController',
         controllerAs: 'mypage'
       })
-      .state('project', {
-        url: '/project',
-        templateUrl: 'app/project/project.html',
-        controller: 'ProjectController',
-        controllerAs: 'project'
+      .state('search', {
+        url: '/search',
+        templateUrl: 'app/search/search.html',
+        controller: 'SearchController',
+        controllerAs: 'search'
+      })
+      .state('profile', {
+        url: '/profile',
+        templateUrl: 'app/profile/profile.html',
+        controller: 'ProfileController',
+        controllerAs: 'profile'
+      })
+      .state('projects', {
+        url: '/projects',
+        templateUrl: 'app/projects/projects.html',
+        controller: 'ProjectsController',
+        controllerAs: 'projects'
       });
 
     $urlRouterProvider.otherwise('/');

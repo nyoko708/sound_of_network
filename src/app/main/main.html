@@ -1,14 +1,14 @@
 <div class="container">
 
   <div>
-    <acme-navbar creation-date="main.creationDate"></acme-navbar>
+    <acme-navbar></acme-navbar>
   </div>
 
   <div class="jumbotron text-center">
     <h1>May the Music be with you.</h1>
     <p class="lead">
-    <button type="button" class="btn btn-success btn-lg">Let's sign in</button>
-    <button type="button" class="btn btn-info btn-lg">Login</button>
+    <button type="button" class="btn btn-success btn-lg" ng-click="go('/login')">Let's sign in</button>
+    <button type="button" class="btn btn-info btn-lg" ng-click="go('/login')">Login</button>
     </p>
     <p>
       Social Matching with <acme-malarkey extra-values="['Musician', 'Sound Engineer', 'Producer', 'Livehouse Owner']"></acme-malarkey>.

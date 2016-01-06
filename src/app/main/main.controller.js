@@ -6,8 +6,12 @@
     .controller('MainController', MainController);
 
   /** @ngInject */
-  function MainController($timeout, webDevTec, toastr) {
+  function MainController($scope, $location, $timeout, webDevTec, toastr) {
     var vm = this;
+
+    $scope.go = function ( path ) {
+        $location.path( path );
+    };
 
     vm.awesomeThings = [];
     vm.classAnimation = '';

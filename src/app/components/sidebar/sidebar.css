@@ -1,15 +1,11 @@
 .sidebar {
+  position: relative;
   padding-right: 0px;
   padding-left: 0px;
-  background-color: #DEDAAA;
-  position: relative;
-  width: 100%;
-  top: 0px;
-  bottom: 0px;
   padding-bottom: 32768px;
   margin-bottom: -32768px;
-  z-index: 0;
-  display: block;
+  background-color: #DEDAAA;
+  width: 100%;
   font-size: 16px;
 }
 
