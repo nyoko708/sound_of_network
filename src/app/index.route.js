@@ -43,6 +43,18 @@
         templateUrl: 'app/projects/projects.html',
         controller: 'ProjectsController',
         controllerAs: 'projects'
+      })
+      .state('requests', {
+        url: '/requests',
+        templateUrl: 'app/requests/requests.html',
+        controller: 'RequestsController',
+        controllerAs: 'requests'
+      })
+      .state('setting', {
+        url: '/setting',
+        templateUrl: 'app/setting/setting.html',
+        controller: 'SettingController',
+        controllerAs: 'setting'
       });
 
     $urlRouterProvider.otherwise('/');
