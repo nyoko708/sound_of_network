@@ -21,11 +21,13 @@
     return directive;
 
     /** @ngInject */
-    function LoginController($scope, $location) {
+    function LoginController($scope, $location, authentication) {
 
       // ログイン処理
-      $scope.login = function () {
-        $location.path('/mypage');
+      $scope.login = function (user) {
+        authentication.login(user.email, user.password);
+        console.log(localStorage.getItem('id_token'));
+        //$location.path('/mypage');
       }
     }
   }

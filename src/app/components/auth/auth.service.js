@@ -1,0 +1,71 @@
+(function() {
+  'use strict';
+
+  angular
+    .module('sound_of_network')
+    .factory('authentication', authentication);
+
+  /** @ngInject */
+  function authentication($http) {
+
+    /**
+     * auth api host
+     */
+    var authApi = 'http://ec2-52-193-71-150.ap-northeast-1.compute.amazonaws.com/api/authenticate';
+
+    /**
+     * user infomation
+     */
+    var userInfo = null;
+
+    /**
+     * login処理 API
+     */
+    var login = function(email, password) {
+      $http.post(authApi, {
+        email:email,
+        password:password
+      },
+      {headers: {
+        'Content-Type' : 'application/x-www-form-urlencoded; charset=UTF-8'
+      }})
+      .success(function(data) {
+        console.log("Auth Api Success.");
+        localStorage.setItem('id_token', data.token);
+      })
+      .error(function(data, status) {
+        console.log("Auth Api Error.");
+      });
+    };
+
+    /**
+     * ログイン中か確認 API
+     */
+    var checkLogin = function(token) {
+      var api = authApi + '?token=' + token;
+
+      $http.get(api)
+      .success(function(data) {
+        userInfo = data.user
+      })
+      .error(function(data) {
+        console.log("not login");
+      });
+
+    };
+
+    var getUserInfo = function() {
+      return userInfo;
+    };
+
+    var service = {
+      authApi: authApi,
+      login: login,
+      checkLogin: checkLogin,
+      getUserInfo: getUserInfo
+    };
+
+    return service;
+  }
+
+})();
