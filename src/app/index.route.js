@@ -44,6 +44,12 @@
         controller: 'ProjectsController',
         controllerAs: 'projects'
       })
+      .state('list', {
+        url: '/list',
+        templateUrl: 'app/projects/list.html',
+        controller: 'ListController',
+        controllerAs: 'list'
+      })
       .state('requests', {
         url: '/requests',
         templateUrl: 'app/requests/requests.html',
