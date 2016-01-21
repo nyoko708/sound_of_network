@@ -6,12 +6,16 @@
     .controller('MainController', MainController);
 
   /** @ngInject */
-  function MainController($scope, $location, $timeout, webDevTec, toastr) {
+  function MainController($scope, $location, $timeout, webDevTec, toastr, authentication) {
+
     var vm = this;
 
     $scope.go = function ( path ) {
         $location.path( path );
     };
+
+    var token = localStorage.getItem('id_token');
+    authentication.checkLogin(token, isLogin);
 
     vm.awesomeThings = [];
     vm.classAnimation = '';
@@ -25,6 +29,15 @@
       $timeout(function() {
         vm.classAnimation = 'rubberBand';
       }, 4000);
+    }
+
+    /**
+     * ログインしてたら
+     */
+    function isLogin() {
+      console.log("aaa");
+      $location.path("/mypage");
+      console.log("bbb");
     }
 
     function showToastr() {

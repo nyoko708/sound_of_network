@@ -48,12 +48,13 @@
 
       $http.get(api)
       .success(function(data) {
+        console.log("islogin");
         userInfo = data.user
         cb();
       })
       .error(function(data) {
         console.log("not login");
-        $location.path("/#");
+        $location.path("/");
       });
 
     };
@@ -62,9 +63,14 @@
       return userInfo;
     };
 
+    var logout = function() {
+      localStorage.removeItem('id_token');
+    }
+
     var service = {
       authApi: authApi,
       login: login,
+      logout: logout,
       checkLogin: checkLogin,
       getUserInfo: getUserInfo
     };
