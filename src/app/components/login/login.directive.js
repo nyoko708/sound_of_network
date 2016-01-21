@@ -25,9 +25,18 @@
 
       // ログイン処理
       $scope.login = function (user) {
-        authentication.login(user.email, user.password);
+        authentication.login(user.email, user.password, loginSuccess, loginError);
         console.log(localStorage.getItem('id_token'));
-        //$location.path('/mypage');
+      }
+
+      // ログイン成功時の処理
+      var loginSuccess = function() {
+        $location.path('/mypage');
+      }
+
+      // ログイン失敗時の処理
+      var loginError = function() {
+        alert("ログイン認証に失敗しました");
       }
     }
   }
