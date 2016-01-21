@@ -21,7 +21,7 @@
     return directive;
 
     /** @ngInject */
-    function SidebarController($scope, authentication) {
+    function SidebarController($scope, $location, authentication) {
 
       // 変数初期化
       $scope.user = {};
@@ -31,14 +31,23 @@
 
       // ログインしていたら
       var userInfo = null;
-      var loginSuccess = function() {
+      var isLogin = function() {
         userInfo = authentication.getUserInfo();
-        console.log(userInfo);
         $scope.user.name = userInfo.name;
       }
 
+      // ログインしていなかったら
+      var notLogin = function() {
+        $location.path("/");
+      }
+
       // ログインしているか確認
-      authentication.checkLogin(token, loginSuccess);
+      authentication.checkLogin(token, isLogin, notLogin);
+
+      $scope.logout = function() {
+        authentication.logout();
+      }
+    
     }
   }
 

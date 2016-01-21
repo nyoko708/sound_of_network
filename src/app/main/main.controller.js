@@ -15,7 +15,7 @@
     };
 
     var token = localStorage.getItem('id_token');
-    authentication.checkLogin(token, isLogin);
+    authentication.checkLogin(token, isLogin, notLogin);
 
     vm.awesomeThings = [];
     vm.classAnimation = '';
@@ -35,9 +35,13 @@
      * ログインしてたら
      */
     function isLogin() {
-      console.log("aaa");
       $location.path("/mypage");
-      console.log("bbb");
+    }
+
+    /**
+     * ログインしていなかったら
+     */
+    function notLogin() {
     }
 
     function showToastr() {

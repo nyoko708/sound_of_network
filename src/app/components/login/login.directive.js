@@ -27,9 +27,12 @@
         $location.path('/mypage');
       }
 
+      var noLogin = function() {
+      }
+
       // token
       var token = localStorage.getItem('id_token');
-      authentication.checkLogin(token, isLogin);
+      authentication.checkLogin(token, isLogin, noLogin);
 
       // ログイン処理
       $scope.login = function (user) {

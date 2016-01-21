@@ -43,17 +43,18 @@
     /**
      * ログイン中か確認 API
      */
-    var checkLogin = function(token, cb) {
+    var checkLogin = function(token, successCb, errorCb) {
       var api = authApi + '?token=' + token;
 
       $http.get(api)
       .success(function(data) {
         console.log("islogin");
-        userInfo = data.user
-        cb();
+        userInfo = data.user;
+        successCb();
       })
       .error(function(data) {
         console.log("not login");
+        errorCb();
       });
 
     };
