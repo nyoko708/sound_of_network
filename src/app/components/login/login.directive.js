@@ -23,6 +23,14 @@
     /** @ngInject */
     function LoginController($scope, $location, authentication) {
 
+      var isLogin = function() {
+        $location.path('/mypage');
+      }
+
+      // token
+      var token = localStorage.getItem('id_token');
+      authentication.checkLogin(token, isLogin);
+
       // ログイン処理
       $scope.login = function (user) {
         authentication.login(user.email, user.password, loginSuccess, loginError);

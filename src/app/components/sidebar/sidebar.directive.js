@@ -21,7 +21,11 @@
     return directive;
 
     /** @ngInject */
-    function SidebarController(authentication) {
+    function SidebarController($scope, authentication) {
+
+      // 変数初期化
+      $scope.user = {};
+
       // token取得
       var token = localStorage.getItem('id_token');
 
@@ -29,7 +33,8 @@
       var userInfo = null;
       var loginSuccess = function() {
         userInfo = authentication.getUserInfo();
-        //alert("こんにちは、" + userInfo.name)
+        console.log(userInfo);
+        $scope.user.name = userInfo.name;
       }
 
       // ログインしているか確認
