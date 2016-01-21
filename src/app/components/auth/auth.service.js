@@ -54,7 +54,6 @@
       })
       .error(function(data) {
         console.log("not login");
-        $location.path("/");
       });
 
     };
