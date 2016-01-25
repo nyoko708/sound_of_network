@@ -68,8 +68,27 @@
       localStorage.removeItem('id_token');
     }
 
-    var create = function() {
-
+    /**
+     * 新規ユーザー作成
+     */
+    var create = function(name, email, password, successCb, errorCb) {
+      var api = userApi;
+      $http.post(authApi, {
+        name: name
+        email:email,
+        password:password
+      },
+      {headers: {
+                  'Content-Type' : 'application/json; charset=UTF-8'
+                }})
+      .success(function(data) {
+        console.log("create user. Success.");
+        successCb();
+      })
+      .error(function(data, status) {
+        console.log("create user. Error.");
+        errorCb();
+      });
     }
 
     var service = {
@@ -77,7 +96,8 @@
       login: login,
       logout: logout,
       checkLogin: checkLogin,
-      getUserInfo: getUserInfo
+      getUserInfo: getUserInfo,
+      create: create
     };
 
     return service;
