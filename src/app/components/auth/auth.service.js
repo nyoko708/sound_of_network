@@ -9,9 +9,10 @@
   function authentication($http, $location) {
 
     /**
-     * auth api host
+     * API URL
      */
-    var authApi = 'http://ec2-52-193-71-150.ap-northeast-1.compute.amazonaws.com/api/authenticate';
+    var authApi = 'http://ec2-52-69-222-2.ap-northeast-1.compute.amazonaws.com/api/authenticate';
+    var userApi = 'http://ec2-52-69-222-2.ap-northeast-1.compute.amazonaws.com/api/user';
 
     /**
      * user infomation
@@ -65,6 +66,10 @@
 
     var logout = function() {
       localStorage.removeItem('id_token');
+    }
+
+    var create = function() {
+
     }
 
     var service = {
