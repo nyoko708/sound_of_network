@@ -15,7 +15,9 @@
     };
 
     var token = localStorage.getItem('id_token');
-    authentication.checkLogin(token, isLogin, notLogin);
+    if(token != '') {
+      authentication.checkLogin(token, isLogin, notLogin);
+    }
 
     vm.awesomeThings = [];
     vm.classAnimation = '';

@@ -45,6 +45,7 @@
      * ログイン中か確認 API
      */
     var checkLogin = function(token, successCb, errorCb) {
+
       var api = authApi + '?token=' + token;
 
       $http.get(api)
