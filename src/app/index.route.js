@@ -14,6 +14,12 @@
         controller: 'MainController',
         controllerAs: 'main'
       })
+      .state('about', {
+        url: '/about',
+        templateUrl: 'app/about/about.html',
+        controller: 'AboutController',
+        controllerAs: 'about'
+      })
       .state('login', {
         url: '/login',
         templateUrl: 'app/login/login.html',
