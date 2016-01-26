@@ -47,7 +47,6 @@
       $scope.logout = function() {
         authentication.logout();
       }
-    
     }
   }
 

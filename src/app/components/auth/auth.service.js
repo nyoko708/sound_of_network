@@ -73,8 +73,8 @@
      */
     var create = function(name, email, password, successCb, errorCb) {
       var api = userApi;
-      $http.post(authApi, {
-        name: name
+      $http.post(api, {
+        name: name,
         email:email,
         password:password
       },
@@ -82,8 +82,12 @@
                   'Content-Type' : 'application/json; charset=UTF-8'
                 }})
       .success(function(data) {
-        console.log("create user. Success.");
-        successCb();
+        if(data.status == "OK") {
+          console.log("create user. Success.");
+          successCb();
+        } else {
+          errorCb();
+        }
       })
       .error(function(data, status) {
         console.log("create user. Error.");
