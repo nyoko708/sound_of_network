@@ -82,9 +82,12 @@
                   'Content-Type' : 'application/json; charset=UTF-8'
                 }})
       .success(function(data) {
+        console.log(data.status);
         if(data.status == "OK") {
-          console.log("create user. Success.");
-          successCb();
+          var user = {};
+          user.email = email;
+          user.password = password;
+          successCb(user);
         } else {
           errorCb();
         }

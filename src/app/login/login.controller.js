@@ -9,30 +9,28 @@
   function LoginController($scope, $location, authentication) {
     var vm = this;
 
-    var successLogin = function() {
+    $scope.user = {};
 
+    var successLogin = function() {
+      $location.path("/mypage");
+    };
+
+    var errorLogin = function() {
     };
 
     var successCreate = function(user) {
-      authentication.login(user.email, user.password, function() {
-        $location.path('/mypage');
-      },
-      function() {
-        $location.path('/login');
-      });
+      authentication.login(user.email, user.password, successLogin, errorLogin);
     };
 
     var errorCreate = function() {
-      alert("ユーザーの作成に失敗しました");
     };
 
+    /**
+     * 新規にユーザーを作る
+     */
     $scope.create = function(user) {
-      authentication.create(user.name, user.email, user.password, successCreate(user), errorCreate);
+      authentication.create(user.name, user.email, user.password, successCreate, errorCreate);
     };
 
-    activate();
-
-    function activate() {
-    }
   }
 })();
