@@ -11,8 +11,8 @@
     /**
      * API URL
      */
-    var authApi = 'http://ec2-52-69-222-2.ap-northeast-1.compute.amazonaws.com/api/authenticate';
-    var userApi = 'http://ec2-52-69-222-2.ap-northeast-1.compute.amazonaws.com/api/user';
+    var authApi = 'http:///api/authenticate';
+    var userApi = 'http:///api/user';
 
     /**
      * user infomation
