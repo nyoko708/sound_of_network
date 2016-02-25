@@ -56,11 +56,23 @@
         controller: 'ProjectsController',
         controllerAs: 'projects'
       })
+      .state('projectcreate', {
+        url: '/project/create',
+        templateUrl: 'app/projects/create.html',
+        controller: 'ProjectsController',
+        controllerAs: 'projects'
+      })
       .state('projectlist', {
         url: '/project/list',
-        templateUrl: 'app/projects/list/index.html',
+        templateUrl: 'app/projects/list.html',
         controller: 'ProjectListController',
         controllerAs: 'list'
+      })
+      .state('projectdetail', {
+        url: '/project/detail',
+        templateUrl: 'app/projects/detail.html',
+        controller: 'ProjectDetailController',
+        controllerAs: 'detail'
       })
       .state('userlist', {
         url: '/user/list',

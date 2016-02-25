@@ -6,8 +6,12 @@
     .controller('ProjectsController', ProjectsController);
 
   /** @ngInject */
-  function ProjectsController() {
+  function ProjectsController($scope, $location) {
     var vm = this;
+
+    $scope.go = function ( path ) {
+      $location.path( path );
+    };
 
     activate();
 

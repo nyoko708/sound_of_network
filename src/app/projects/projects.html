@@ -6,8 +6,8 @@
   </div>
   <div class="container col-lg-9 col-md-9 col-sm-6 main-section">
     <h3>Projects</h3>
-    <hr>
-    <h4>あなたが参加しているプロジェクト一覧</h4>
+    <button ng-click="go('/project/create')" class="btn btn-warning pull-right" style="margin-bottom:20px">Create Project</button>
+    <hr style="clear:right">
     <div class="panel panel-primary">
       <div class="panel-heading">
         <h5 class="panel-title">hogehoge project</h5>
@@ -19,7 +19,7 @@
         応援された数：1000<br>
         集めたお金： ￥100,000<br>
         参加メンバー：abscsdafa, adfasfasfaf, asdfadfa...<br>
-        <a href="#">detail</a>
+        <a href="#/project/detail">detail</a>
       </div>
     </div>
     <div class="panel panel-success">
@@ -33,7 +33,7 @@
         応援された数：0<br>
         集めたお金： ￥1000<br>
         参加メンバー：abscsdafa, adfasfasfaf, asdfadfa...<br>
-        <a href="#">detail</a>
+        <a href="#/project/detail">detail</a>
       </div>
     </div>
     <div class="panel panel-success">
