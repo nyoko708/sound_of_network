@@ -7,5 +7,47 @@
   <div class="container col-lg-9 col-md-9 col-sm-6 main-section">
     <h3>Create Project</h3>
     <hr>
+    <form class="form-horizontal">
+      <div class="form-group">
+        <label class="col-sm-2 control-label">Project Name</label>
+        <div class="col-sm-10">
+          <input type="text" id="input" ng-model="project.name" class="form-control" placeholder="project name" required autofocus>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-sm-2 control-label">Description</label>
+        <div class="col-sm-10">
+          <textarea class="form-control" rows="3" ng-model="project.description" placeholder="This project is create music."></textarea>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-sm-2 control-label">Goal Description</label>
+        <div class="col-sm-10">
+          <textarea class="form-control" rows="3" ng-model="project.goal_description" placeholder="This project goal is finish create music."></textarea>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+          <div class="checkbox">
+            <label>
+              <input type="checkbox"> Public Access ?
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-sm-2 control-label">Project Members</label>
+        <div class="col-sm-10">
+          <input type="text" id="input" ng-model="project.members" class="form-control" placeholder="project members" required autofocus>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+          <button class="btn btn-lg btn-primary btn-block" type="submit" ng-click="createProject(project)">Create Project</button>
+        </div>
+      </div>
+    </form>
   </div>
 </div>
+
+<acme-footer></acme-footer>
