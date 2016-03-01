@@ -69,7 +69,7 @@
         controllerAs: 'list'
       })
       .state('projectdetail', {
-        url: '/project/detail',
+        url: '/project/detail/{projectId:[0-9]}',
         templateUrl: 'app/projects/detail.html',
         controller: 'ProjectDetailController',
         controllerAs: 'detail'
