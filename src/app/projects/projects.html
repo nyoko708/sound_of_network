@@ -8,46 +8,18 @@
     <h3>Projects</h3>
     <button ng-click="go('/project/create')" class="btn btn-warning pull-right" style="margin-bottom:20px">Create Project</button>
     <hr style="clear:right">
-    <div class="panel panel-primary">
+    <div class="panel panel-primary" ng-repeat="project in projects.projects">
       <div class="panel-heading">
-        <h5 class="panel-title">hogehoge project</h5>
+        <h5 class="panel-title">{{project.name}}</h5>
       </div>
       <div class="panel-body">
-        プロジェクトのゴール：音源完成<br>
+        プロジェクトのゴール：{{project.goal_description}}<br>
         進捗状況：50%<br>
-        公開/非公開：公開<br>
-        応援された数：1000<br>
+        公開/非公開：公開{{project.access}}<br>
+        応援された数：{{project.good_sum}}<br>
         集めたお金： ￥100,000<br>
         参加メンバー：abscsdafa, adfasfasfaf, asdfadfa...<br>
-        <a href="#/project/detail">detail</a>
-      </div>
-    </div>
-    <div class="panel panel-success">
-      <div class="panel-heading">
-        <h5 class="panel-title">rock band project</h5>
-      </div>
-      <div class="panel-body">
-        プロジェクトのゴール：ライブをする<br>
-        進捗状況：100%<br>
-        公開/非公開：非公開<br>
-        応援された数：0<br>
-        集めたお金： ￥1000<br>
-        参加メンバー：abscsdafa, adfasfasfaf, asdfadfa...<br>
-        <a href="#/project/detail">detail</a>
-      </div>
-    </div>
-    <div class="panel panel-success">
-      <div class="panel-heading">
-        <h5 class="panel-title">rock band project</h5>
-      </div>
-      <div class="panel-body">
-        プロジェクトのゴール：ライブをする<br>
-        進捗状況：100%<br>
-        公開/非公開：非公開<br>
-        応援された数：0<br>
-        集めたお金： ￥1000<br>
-        参加メンバー：hoge, fuge<br>
-        <a href="#">detail</a>
+        <a href="#/project/detail/{{project.id}}">detail</a>
       </div>
     </div>
   </div>
