@@ -6,13 +6,16 @@
     .factory('authentication', authentication);
 
   /** @ngInject */
-  function authentication($http, $location) {
+  function authentication($http, $location, apihost) {
+
+    console.log("aaaa");
+    console.log(apihost);
 
     /**
      * API URL
      */
-    var authApi = 'http://ec2-52-68-111-183.ap-northeast-1.compute.amazonaws.com/api/authenticate';
-    var userApi = 'http://ec2-52-68-111-183.ap-northeast-1.compute.amazonaws.com/api/user';
+    var authApi = 'http://'+ apihost +'/api/authenticate';
+    var userApi = 'http://'+ apihost +'/api/user';
 
     /**
      * user infomation

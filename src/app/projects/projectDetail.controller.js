@@ -6,13 +6,13 @@
     .controller('ProjectDetailController', ProjectDetailController);
 
   /** @ngInject */
-  function ProjectDetailController($stateParams, $http, $location, $scope) {
+  function ProjectDetailController($stateParams, $http, $location, $scope, apihost) {
     var vm = this;
 
     $scope.project = {};
 
     var token = localStorage.getItem('id_token');
-    var api = "http://ec2-52-68-111-183.ap-northeast-1.compute.amazonaws.com/api/project/";
+    var api = 'http://' + apihost + '/api/project/';
     api = api + $stateParams.projectId + "?token=" + token;
 
     $http.get(api,

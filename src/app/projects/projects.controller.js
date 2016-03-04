@@ -6,7 +6,7 @@
     .controller('ProjectsController', ProjectsController);
 
   /** @ngInject */
-  function ProjectsController($scope, $location, $http) {
+  function ProjectsController($scope, $location, $http, apihost) {
     var vm = this;
 
     /**
@@ -20,7 +20,7 @@
      * プロジェクトの作成
      */
     $scope.createProject = function(projectData) {
-      var api = 'http://ec2-52-68-111-183.ap-northeast-1.compute.amazonaws.com/api/project/create';
+      var api = 'http://'+ apihost +'/api/project/create';
 
       var token = localStorage.getItem('id_token');
       api = api + '?token=' + token;
