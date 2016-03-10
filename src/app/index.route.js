@@ -77,7 +77,7 @@
       .state('userlist', {
         url: '/user/list',
         templateUrl: 'app/user/list/index.html',
-        controller: 'UserListController',
+        controller: 'UserController',
         controllerAs: 'list'
       })
       .state('requests', {
