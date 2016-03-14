@@ -78,7 +78,13 @@
         url: '/user/list',
         templateUrl: 'app/user/list/index.html',
         controller: 'UserController',
-        controllerAs: 'list'
+        controllerAs: 'userlist'
+      })
+      .state('userdetail', {
+        url: '/user/detail/{userId:[0-9]}',
+        templateUrl: 'app/user/detail/index.html',
+        controller: 'UserController',
+        controllerAs: 'userdetail'
       })
       .state('requests', {
         url: '/requests',

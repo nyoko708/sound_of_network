@@ -34,5 +34,17 @@
   <h1>注目のユーザー</h1>
   <hr>
   <p class="text-right"><a href="/#/user/list">もっと見る...</a></p>
+  <div class="row">
+    <div class="col-sm-6 col-md-4" ng-repeat="user in main.users">
+      <div class="thumbnail">
+        <img class="pull-right" ng-src="assets/images/angular.png" alt="{{user.name}}">
+        <div class="caption">
+          <h3>{{ user.name }}</h3>
+          <p>{{ user.description }}</p>
+          <p><a ng-href="/#/user/detail/{{user.id}}">詳細を見る</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
 
 </div>
