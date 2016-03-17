@@ -6,7 +6,7 @@
     .controller('RequestsController', RequestsController);
 
   /** @ngInject */
-  function RequestsController() {
+  function RequestsController($scope, $location, $http, apihost) {
     var vm = this;
 
     activate();
@@ -14,5 +14,11 @@
     function activate() {
     }
 
+    /**
+     * リクエストの作成
+     */
+    $scope.createRequest = function(request) {
+
+    }
   }
 })();

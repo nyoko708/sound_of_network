@@ -1,0 +1,40 @@
+<acme-navbar></acme-navbar>
+
+<div class="row main-content">
+  <div class="col-sm-3 col-sm-2 main-right">
+    <acme-sidebar></acme-sidebar>
+  </div>
+  <div class="container col-lg-9 col-md-9 col-sm-6 main-section">
+    <h3>依頼する</h3>
+    <hr>
+      <form class="form-horizontal">
+        <div class="form-group">
+          <label class="col-sm-2 control-label">To</label>
+          <div class="col-sm-10">
+            <b>hogehoge</b>
+            <input type="hidden" ng-model="request.toUserId" value="">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-sm-2 control-label">From</label>
+          <div class="col-sm-10">
+            <b>foobar</b>
+            <input type="hidden" ng-model="request.fromUserId" value="">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-sm-2 control-label">Message</label>
+          <div class="col-sm-10">
+            <textarea class="form-control" rows="3" ng-model="request.toMessage" placeholder="あなたにギターを担当して欲しいです"></textarea>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-10">
+            <button class="btn btn-lg btn-primary btn-block" type="submit" ng-click="createRequest(request)">依頼する</button>
+          </div>
+        </div>
+      </form>
+  </div>
+</div>
+
+<acme-footer></acme-footer>

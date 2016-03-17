@@ -92,6 +92,12 @@
         controller: 'RequestsController',
         controllerAs: 'requests'
       })
+      .state('requestscreate', {
+        url: '/request/create',
+        templateUrl: 'app/requests/create.html',
+        controller: 'RequestsController',
+        controllerAs: 'requestcreate'
+      })
       .state('setting', {
         url: '/setting',
         templateUrl: 'app/setting/setting.html',
