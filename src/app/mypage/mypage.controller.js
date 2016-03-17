@@ -11,7 +11,7 @@
 
     vm.errorMessage = "";
     vm.projects = [];
-    vm.getRequests = [];
+    vm.responseRequests = [];
     vm.sendRequests = [];
 
     var token = localStorage.getItem('id_token');
@@ -24,7 +24,6 @@
 
       getMyRequests();
 
-      getMySendRequests();
     }
 
     function getMyProject() {
@@ -41,29 +40,17 @@
     }
 
     function getMyRequests() {
-      var api = 'http://' + apihost + '/api/me/request/get?token=' + token;
+      var api = 'http://' + apihost + '/api/me/requests?token=' + token;
 
       var success = function(data) {
-        vm.projects = data.projects;
+        vm.sendRequests = data.requests.send;
+        vm.responseRequests = data.requests.response;
       }
 
       var error = function(data) {
       }
 
-      //requestApi(api, success, error)
-    }
-
-    function getMySendRequests() {
-      var api = 'http://' + apihost + '/api/me/request/send?token=' + token;
-
-      var success = function(data) {
-        vm.projects = data.projects;
-      }
-
-      var error = function(data) {
-      }
-
-      //requestApi(api, success, error)
+      requestApi(api, success, error)
     }
 
     function requestApi(api, sC, eC) {

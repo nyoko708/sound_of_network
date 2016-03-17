@@ -9,6 +9,8 @@
   function RequestsController($scope, $location, $http, apihost) {
     var vm = this;
 
+    vm.request = [];
+
     var token = localStorage.getItem('id_token');
 
     activate();
@@ -23,10 +25,12 @@
       var api = "http://" + apihost + "/api/request/create";
       api = api + "?token=" + token;
 
+      console.log(request);
+
       $http.post(api, {
         from_user_id: request.fromUserId,
         to_user_id: request.toUserId,
-        to_message: request.toMessage,
+        to_message: request.toMessage
       },
       {headers: {
                   'Content-Type' : 'application/json; charset=UTF-8'
