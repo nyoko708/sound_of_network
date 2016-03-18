@@ -82,7 +82,7 @@
       })
       .state('userdetail', {
         url: '/user/detail/{userId:[0-9]}',
-        templateUrl: 'app/user/detail/index.html',
+        templateUrl: 'app/user/detail.html',
         controller: 'UserController',
         controllerAs: 'userdetail'
       })
@@ -96,7 +96,13 @@
         url: '/request/create',
         templateUrl: 'app/requests/create.html',
         controller: 'RequestsController',
-        controllerAs: 'requestcreate'
+        controllerAs: 'create'
+      })
+      .state('requestsdetail', {
+        url: '/request/detail/{requestId:[0-9]}',
+        templateUrl: 'app/requests/detail.html',
+        controller: 'RequestsController',
+        controllerAs: 'detail'
       })
       .state('setting', {
         url: '/setting',

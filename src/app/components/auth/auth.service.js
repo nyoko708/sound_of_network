@@ -8,9 +8,6 @@
   /** @ngInject */
   function authentication($http, $location, apihost) {
 
-    console.log("aaaa");
-    console.log(apihost);
-
     /**
      * API URL
      */

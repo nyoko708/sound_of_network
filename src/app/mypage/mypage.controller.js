@@ -11,7 +11,7 @@
 
     vm.errorMessage = "";
     vm.projects = [];
-    vm.responseRequests = [];
+    vm.receiveRequests = [];
     vm.sendRequests = [];
 
     var token = localStorage.getItem('id_token');
@@ -44,7 +44,7 @@
 
       var success = function(data) {
         vm.sendRequests = data.requests.send;
-        vm.responseRequests = data.requests.response;
+        vm.receiveRequests = data.requests.receive;
       }
 
       var error = function(data) {
