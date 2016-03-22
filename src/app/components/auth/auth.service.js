@@ -48,12 +48,10 @@
 
       $http.get(api)
       .success(function(data) {
-        console.log("islogin");
         userInfo = data.user;
         successCb();
       })
       .error(function(data) {
-        console.log("not login");
         errorCb();
       });
 
@@ -81,7 +79,6 @@
                   'Content-Type' : 'application/json; charset=UTF-8'
                 }})
       .success(function(data) {
-        console.log(data.status);
         if(data.status == "OK") {
           var user = {};
           user.email = email;

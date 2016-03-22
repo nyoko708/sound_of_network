@@ -98,11 +98,17 @@
         controller: 'RequestsController',
         controllerAs: 'create'
       })
-      .state('requestsdetail', {
-        url: '/request/detail/{requestId:[0-9]}',
-        templateUrl: 'app/requests/detail.html',
+      .state('requestsdetailsend', {
+        url: '/request/detail/send/{requestId:[0-9]}',
+        templateUrl: 'app/requests/detail_send.html',
         controller: 'RequestsController',
-        controllerAs: 'detail'
+        controllerAs: 'senddetail'
+      })
+      .state('requestsdetailrecive', {
+        url: '/request/detail/recive/{requestId:[0-9]}',
+        templateUrl: 'app/requests/detail_recive.html',
+        controller: 'RequestsController',
+        controllerAs: 'recivedetail'
       })
       .state('setting', {
         url: '/setting',

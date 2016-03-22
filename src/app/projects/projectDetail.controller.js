@@ -20,11 +20,9 @@
                 'Content-Type' : 'application/json; charset=UTF-8'
               }})
     .success(function(data) {
-      console.log(data.project);
       $scope.project = data.project;
     })
     .error(function(data, status) {
-      console.log("aaaaa");
     });
 
     activate();

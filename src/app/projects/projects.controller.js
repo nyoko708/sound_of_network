@@ -27,7 +27,6 @@
                     'Content-Type' : 'application/json; charset=UTF-8'
                   }})
     .success(function(data) {
-      console.log(data);
       vm.projects = data.projects;
     })
     .error(function(data, status) {
@@ -57,7 +56,6 @@
                   'Content-Type' : 'application/json; charset=UTF-8'
                 }})
       .success(function(data) {
-        console.log(data);
         $location.path('/project/detail/'+data.projectId);
       })
       .error(function(data, status) {

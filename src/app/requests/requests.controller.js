@@ -48,9 +48,27 @@
                     }})
       .success(function(data) {
         console.log(data);
-        $scope.request.type = data.request.type;
+        // 依頼したのか、されたのか？
+        if(data.request.type == "send") {
+          $scope.request.type = "依頼した";
+          $scope.request.readStatus = "未読";
+          if(data.read_status == 1) {
+            $socpe.request.readStatus = "既読";
+          }
+          $scope.request.responseStatus = "未承認";
+          if(data.response_status == 1) {
+            $scope.request.responseStatus = "承認";
+          }
+        } else {
+          $scope.request.type = "依頼された";
+          $scope.request.readStatus = "";
+          $scope.request.responseStatus = "承認する";
+        }
+
+        // userIdから名前取得
         $scope.request.fromUserId = data.request.data.from_user_id;
         $scope.request.toUserId = data.request.data.to_user_id;
+
         $scope.request.message = data.request.data.message;
       })
       .error(function(data, status) {

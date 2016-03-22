@@ -10,18 +10,18 @@
     <hr>
     <h4><span class="glyphicon glyphicon-tasks link-section-icon color-orange"></span>　あなたが参加しているプロジェクト</h4>
     <ul class="list-group">
-      <li class="list-group-item" ng-repeat="project in mypage.projects">{{project.name}}</li>
+      <li class="list-group-item" ng-repeat="project in mypage.projects"><a href="#/project/detail/{{project.id}}">{{project.name}}</a></li>
     </ul>
     <h4><span class="glyphicon glyphicon-music link-section-icon color-orange"></span>　
 あなたに来ている依頼</h4>
     <ul class="list-group">
-      <li class="list-group-item" ng-repeat="res in mypage.receiveRequests"><a href="/#/request/detail/{{res.from_user_id}}">FROM: {{res.from_user_id}}</a></li>
+      <li class="list-group-item" ng-repeat="res in mypage.receiveRequests"><a href="/#/request/detail/recive/{{res.requests_id}}">FROM: {{res.from_user_id}}</a></li>
     </ul>
     <hr>
     <h4><span class="glyphicon glyphicon-music link-section-icon color-orange"></span>　
 あなたが送った依頼</h4>
     <ul class="list-group">
-      <li class="list-group-item" ng-repeat="res in mypage.sendRequests"><a href="#/request/detail/{{res.to_user_id}}">TO: {{res.to_user_id}}</li>
+      <li class="list-group-item" ng-repeat="res in mypage.sendRequests"><a href="#/request/detail/send/{{res.requests_id}}">TO: {{res.to_user_id}}</li>
     </ul>
     <hr>
   </div>
