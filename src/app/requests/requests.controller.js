@@ -48,27 +48,46 @@
                     }})
       .success(function(data) {
         console.log(data);
-        // 依頼したのか、されたのか？
+
+        // 依頼した
         if(data.request.type == "send") {
           $scope.request.type = "依頼した";
+
+          // 未読・既読
           $scope.request.readStatus = "未読";
-          if(data.read_status == 1) {
+          if(data.request.data.read_status == 1) {
             $socpe.request.readStatus = "既読";
           }
-          $scope.request.responseStatus = "未承認";
-          if(data.response_status == 1) {
-            $scope.request.responseStatus = "承認";
+
+          // 承認・否認
+          $scope.request.response = true; // レスポンスされた:true されてない:false
+          $scope.request.responseStatus = "";
+          if(data.request.data.response_status == 0) {
+            $scope.request.response = false;
+          } else if(data.request.data.response_status == 1) {
+            $scope.request.responseStatus = "承認されました";
+          } else if(data.request.data.response_status == 2) {
+            $scope.request.responseStatus = "否認されました";
           }
+
+
+        // 依頼された
         } else {
           $scope.request.type = "依頼された";
           $scope.request.readStatus = "";
-          $scope.request.responseStatus = "承認する";
+
+          $scope.request.response = true; // レスポンス済み:true レスポンスしていない:false
+          $scope.request.responseStatus = false; // 承認:true 否認:false
+          if(data.request.data.response_status == 0) {
+            $scope.request.response = false;
+          } else if(data.request.data.response_status == 2) {
+            $scope.request.responseStatus = true;
+          }
         }
 
         // userIdから名前取得
         $scope.request.fromUserId = data.request.data.from_user_id;
         $scope.request.toUserId = data.request.data.to_user_id;
-
         $scope.request.message = data.request.data.message;
       })
       .error(function(data, status) {
@@ -112,6 +131,10 @@
       .error(function(data, status) {
         console.log("error. get user lists.");
       });
+    }
+
+    function readRequest() {
+
     }
 
   }

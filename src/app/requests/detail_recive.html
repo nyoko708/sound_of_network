@@ -5,15 +5,14 @@
     <acme-sidebar></acme-sidebar>
   </div>
   <div class="container col-lg-9 col-md-9 col-sm-6 main-section">
-    <h3>依頼詳細</h3>
+    <h3>あなたに来ている依頼</h3>
     <hr>
-    種類：{{request.type}}<br>
-    既読ステータス：{{request.readStatus}}<br>
-    ステータス：{{request.responseStatus}}
+    <button type="button" ng-hide="request.response" class="btn btn-warning">承認する</button>
+    <button type="button" ng-hide="request.response" class="btn btn-danger">否認する</button>
     <hr>
-    <p>To:{{request.toUserId}}</p>
-    <p>From:{{request.fromUserId}}</p>
-    <p>Message:</p>
+    <p><b>To:</b> {{request.toUserId}}</p>
+    <p><b>From:</b> {{request.fromUserId}}</p>
+    <p><b>Message:</b></p>
     <span>{{request.message}}</span>
   </div>
 </div>
