@@ -68,6 +68,12 @@
         controller: 'ProjectListController',
         controllerAs: 'list'
       })
+      .state('publicprojectdetail', {
+        url: '/project/detail/public/{projectId:[0-9]}',
+        templateUrl: 'app/projects/public_detail.html',
+        controller: 'ProjectDetailController',
+        controllerAs: 'detail'
+      })
       .state('projectdetail', {
         url: '/project/detail/{projectId:[0-9]}',
         templateUrl: 'app/projects/detail.html',

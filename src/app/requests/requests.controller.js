@@ -86,8 +86,8 @@
         }
 
         // userIdから名前取得
-        $scope.request.fromUserId = data.request.data.from_user_id;
-        $scope.request.toUserId = data.request.data.to_user_id;
+        $scope.request.fromUserId = data.request.data.from_user_name;
+        $scope.request.toUserId = data.request.data.to_user_name;
         $scope.request.message = data.request.data.message;
       })
       .error(function(data, status) {

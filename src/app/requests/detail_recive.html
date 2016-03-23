@@ -10,8 +10,7 @@
     <button type="button" ng-hide="request.response" class="btn btn-warning">承認する</button>
     <button type="button" ng-hide="request.response" class="btn btn-danger">否認する</button>
     <hr>
-    <p><b>To:</b> {{request.toUserId}}</p>
-    <p><b>From:</b> {{request.fromUserId}}</p>
+    <p><b>{{request.fromUserId}}</b>さんからあなたへ依頼がきました</p>
     <p><b>Message:</b></p>
     <span>{{request.message}}</span>
   </div>

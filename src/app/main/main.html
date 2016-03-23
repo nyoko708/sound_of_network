@@ -18,18 +18,7 @@
   <h1>注目のプロジェクト</h1>
   <hr>
   <p class="text-right"><a href="/#/project/list">もっと見る...</a></p>
-  <div class="row">
-    <div class="col-sm-6 col-md-4" ng-repeat="awesomeThing in main.awesomeThings | orderBy:'rank'">
-      <div class="thumbnail">
-        <img class="pull-right" ng-src="assets/images/{{ awesomeThing.logo }}" alt="{{ awesomeThing.title }}">
-        <div class="caption">
-          <h3>{{ awesomeThing.title }}</h3>
-          <p>{{ awesomeThing.description }}</p>
-          <p><a ng-href="{{awesomeThing.url}}">{{ awesomeThing.url }}</a></p>
-        </div>
-      </div>
-    </div>
-  </div>
+  <acme-projects></acme-projects>
 
   <h1>注目のユーザー</h1>
   <hr>
