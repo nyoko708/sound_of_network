@@ -14,7 +14,7 @@
      * GET リクエスト
      */
     var requestGet = function(api, sC, eC) {
-      $http.get(api, headers
+      $http.get(api, headers)
       .success(function(data) {
         sC(data);
       })
@@ -27,7 +27,7 @@
      * POST リクエスト
      */
     var requestPost = function(api, args, sC, eC) {
-      $http.post(api, args, headers
+      $http.post(api, args, headers)
       .success(function(data) {
         sC(data);
       })
@@ -36,9 +36,11 @@
       });
     };
 
-    return {
+    var service = {
       requestGet: requestGet,
       requestPost: requestPost
     };
+
+    return service;
   }
 })();

@@ -7,8 +7,9 @@
   <div class="container col-lg-9 col-md-9 col-sm-6 main-section">
     <h3>あなたに来ている依頼</h3>
     <hr>
-    <button type="button" ng-hide="request.response" class="btn btn-warning">承認する</button>
-    <button type="button" ng-hide="request.response" class="btn btn-danger">否認する</button>
+    <button type="button" ng-hide="request.response" class="btn btn-warning" ng-click="response(1)">承認する</button>
+    <button type="button" ng-hide="request.response" class="btn btn-danger" ng-click="response(2)">否認する</button>
+    <div class="well" ng-show="request.response">{{request.responseStatus}}</div>
     <hr>
     <p><b>{{request.fromUserId}}</b>さんからあなたへ依頼がきました</p>
     <p><b>Message:</b></p>

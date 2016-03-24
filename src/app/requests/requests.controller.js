@@ -19,6 +19,26 @@
     $scope.request.toUserId = shareData.data.id;
     $scope.request.toUserName = shareData.data.name;
 
+    /**
+     * 承認・否認ボタン
+     */
+    $scope.response = function(statusCode) {
+      var api = "http://" + apihost + "/api/request/response?token=" + token;
+      $http.post(api, {
+        request_id: requestId,
+        status_code: statusCode
+      },
+      {headers: {
+                  'Content-Type' : 'application/json; charset=UTF-8'
+                }})
+      .success(function(data) {
+        console.log(data);
+        detailRequest(requestId);
+      })
+      .error(function(data, status) {
+      });
+    };
+
     activate();
 
     function activate() {
@@ -47,8 +67,6 @@
                       'Content-Type' : 'application/json; charset=UTF-8'
                     }})
       .success(function(data) {
-        console.log(data);
-
         // 依頼した
         if(data.request.type == "send") {
           $scope.request.type = "依頼した";
@@ -56,7 +74,7 @@
           // 未読・既読
           $scope.request.readStatus = "未読";
           if(data.request.data.read_status == 1) {
-            $socpe.request.readStatus = "既読";
+            $scope.request.readStatus = "既読";
           }
 
           // 承認・否認
@@ -77,12 +95,15 @@
           $scope.request.readStatus = "";
 
           $scope.request.response = true; // レスポンス済み:true レスポンスしていない:false
-          $scope.request.responseStatus = false; // 承認:true 否認:false
+          $scope.request.responseStatus = "承認しました"; // 承認:true 否認:false
           if(data.request.data.response_status == 0) {
             $scope.request.response = false;
           } else if(data.request.data.response_status == 2) {
-            $scope.request.responseStatus = true;
+            $scope.request.responseStatus = "否認しました";
           }
+
+          // 既読済みにする
+          readRequest(requestId)
         }
 
         // userIdから名前取得
@@ -133,8 +154,20 @@
       });
     }
 
-    function readRequest() {
+    function readRequest(requestId) {
+      var api = "http://" + apihost + "/api/request/read?token=" + token;
 
+      $http.post(api, {
+        request_id: requestId,
+      },
+      {headers: {
+                  'Content-Type' : 'application/json; charset=UTF-8'
+                }})
+      .success(function(data) {
+        console.log(data);
+      })
+      .error(function(data, status) {
+      });
     }
 
   }
