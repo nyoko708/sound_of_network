@@ -69,13 +69,13 @@
         controllerAs: 'list'
       })
       .state('publicprojectdetail', {
-        url: '/project/detail/public/{projectId:[0-9]}',
+        url: '/project/detail/public/{projectId:[0-9]+}',
         templateUrl: 'app/projects/public_detail.html',
         controller: 'ProjectDetailController',
         controllerAs: 'detail'
       })
       .state('projectdetail', {
-        url: '/project/detail/{projectId:[0-9]}',
+        url: '/project/detail/{projectId:[0-9]+}',
         templateUrl: 'app/projects/detail.html',
         controller: 'ProjectDetailController',
         controllerAs: 'detail'
@@ -87,7 +87,7 @@
         controllerAs: 'userlist'
       })
       .state('userdetail', {
-        url: '/user/detail/{userId:[0-9]}',
+        url: '/user/detail/{userId:[0-9]+}',
         templateUrl: 'app/user/detail.html',
         controller: 'UserController',
         controllerAs: 'userdetail'
@@ -105,13 +105,13 @@
         controllerAs: 'create'
       })
       .state('requestsdetailsend', {
-        url: '/request/detail/send/{requestId:[0-9]}',
+        url: '/request/detail/send/{requestId:[0-9]+}',
         templateUrl: 'app/requests/detail_send.html',
         controller: 'RequestsController',
         controllerAs: 'senddetail'
       })
       .state('requestsdetailrecive', {
-        url: '/request/detail/recive/{requestId:[0-9]}',
+        url: '/request/detail/recive/{requestId:[0-9]+}',
         templateUrl: 'app/requests/detail_recive.html',
         controller: 'RequestsController',
         controllerAs: 'recivedetail'
