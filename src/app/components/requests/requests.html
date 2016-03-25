@@ -5,8 +5,8 @@
     <div class="thumbnail">
       <img class="pull-right" ng-src="assets/images/jasmine.png" alt="">
       <div class="caption">
-        <h3>{{req.from_user_id}}さんからあなたへの依頼</h3>
-        <p>{{req.to_user_id}}</p>
+        <h3>{{req.name}}さんからあなたへの依頼</h3>
+        <p>{{req.message}}</p>
         <p><a ng-href="#/request/detail/recive/{{req.requests_id}}">詳細</a></p>
       </div>
     </div>
@@ -20,8 +20,8 @@
     <div class="thumbnail">
       <img class="pull-right" ng-src="assets/images/jasmine.png" alt="">
       <div class="caption">
-        <h3>{{req.to_user_id}}への依頼</h3>
-        <p>{{req.from_user_id}}</p>
+        <h3>{{req.name}}への依頼</h3>
+        <p>{{req.message}}</p>
         <p><a ng-href="#/request/detail/send/{{req.requests_id}}">詳細</a></p>
       </div>
     </div>
