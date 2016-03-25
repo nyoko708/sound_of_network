@@ -19,11 +19,8 @@
     activate();
 
     function activate() {
-
       getMyProject();
-
       getMyRequests();
-
     }
 
     function getMyProject() {
@@ -63,7 +60,6 @@
         sC(data);
       })
       .error(function(data, status) {
-        alert("データの取得に失敗しました");
         eC(data);
       });
     }

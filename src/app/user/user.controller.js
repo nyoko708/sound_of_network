@@ -45,7 +45,6 @@
         vm.users = data.profiles;
       })
       .error(function(data, status) {
-        console.log("error. get user lists.");
       });
     }
 

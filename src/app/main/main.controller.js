@@ -6,7 +6,7 @@
     .controller('MainController', MainController);
 
   /** @ngInject */
-  function MainController($scope, $location, $http, $timeout, webDevTec, toastr, authentication, apihost) {
+  function MainController($scope, $location, $http, authentication, apihost) {
 
     var vm = this;
 
@@ -21,10 +21,6 @@
       authentication.checkLogin(token, isLogin, notLogin);
     }
 
-    vm.awesomeThings = [];
-    vm.classAnimation = '';
-    vm.creationDate = 1450076453149;
-    vm.showToastr = showToastr;
     vm.users = [];
 
     activate();
@@ -44,11 +40,6 @@
      * ログインしていなかったら
      */
     function notLogin() {
-    }
-
-    function showToastr() {
-      toastr.info('Fork <a href="https://github.com/Swiip/generator-gulp-angular" target="_blank"><b>generator-gulp-angular</b></a>');
-      vm.classAnimation = '';
     }
 
     function getUserList() {

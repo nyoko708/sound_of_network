@@ -89,7 +89,6 @@
         }
       })
       .error(function(data, status) {
-        console.log("create user. Error.");
         errorCb();
       });
     }
