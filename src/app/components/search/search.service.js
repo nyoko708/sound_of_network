@@ -6,7 +6,7 @@
     .factory('search', search);
 
   /** @ngInject */
-  function search($http, $location) {
+  function search() {
 
     var service = {
     };

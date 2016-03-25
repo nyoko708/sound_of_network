@@ -36,7 +36,6 @@
                           'Content-Type' : 'application/json; charset=UTF-8'
                         }})
         .success(function(data) {
-          console.log(data);
           $scope.projects = data.projects;
         })
         .error(function(data, status) {

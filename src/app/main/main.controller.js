@@ -30,11 +30,7 @@
     activate();
 
     function activate() {
-      getWebDevTec();
       getUserList();
-      $timeout(function() {
-        vm.classAnimation = 'rubberBand';
-      }, 4000);
     }
 
     /**
@@ -63,26 +59,9 @@
                       'Content-Type' : 'application/json; charset=UTF-8'
                     }})
       .success(function(data) {
-        console.log(data);
         vm.users = data.profiles;
       })
       .error(function(data, status) {
-        console.log("error. get users.");
-      });
-    }
-
-    function getWebDevTec() {
-      vm.awesomeThings = webDevTec.getTec();
-      vm.awesomeThings[vm.awesomeThings.length] = {   $$hashKey: "",
-                                                      description: "aaa is project. desc desc desc.",
-                                                      logo: "angular.png",
-                                                      rank: 1,
-                                                      title: "AAAAAA Project",
-                                                      url: "https://angularjs.org/"
-                                                  }
-
-      angular.forEach(vm.awesomeThings, function(awesomeThing) {
-        awesomeThing.rank = Math.random();
       });
     }
   }
