@@ -63,6 +63,5 @@
         console.log("error. get user lists.");
       });
     }
-
   }
 })();
