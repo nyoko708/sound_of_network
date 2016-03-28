@@ -4,16 +4,50 @@
   <div class="col-sm-3 col-sm-2 main-right">
     <acme-sidebar></acme-sidebar>
   </div>
+
   <div class="container col-lg-9 col-md-9 col-sm-6 main-section">
     <h3>{{project.name}}</h3>
     <hr>
-    <p>説明</p>
+    <div class="row">
+      <div class="col-md-3">
+        <div class="panel panel-success">
+          <div class="panel-heading">
+            <h3 class="panel-title">達成度</h3>
+          </div>
+          <div class="panel-body">
+           50% 
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="panel panel-info">
+          <div class="panel-heading">
+            <h3 class="panel-title">いいね数</h3>
+          </div>
+          <div class="panel-body">
+            0
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="panel panel-warning">
+          <div class="panel-heading">
+            <h3 class="panel-title">資金</h3>
+          </div>
+          <div class="panel-body">
+            0
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <h3>説明</h3>
     {{project.description}}
     <hr>
-    <p>ゴール</p>
+    <h3>ゴール</h3>
     {{project.goal_description}}
     <hr>
-    <p>メンバー</p>
+    <h3>メンバー</h3>
     test01,test02,test03,test04
     <hr>
     <p>プロジェクト資金</p>

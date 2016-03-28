@@ -13,58 +13,32 @@
         <img class="pull-right">
         <div class="caption">
           <p><img src="assets/images/icon_128.png" alt="sound of network icon" class="img-circle"></p>
-          <p><a ng-href="#">{{user.name}}</a></p>
+          <p>プロフィール画像</p>
         </div>
       </div>
     </div>
     <div class="col-sm-6 col-md-4">
-      <h4>User Name</h4>
+      <h4>名前</h4>
       <hr>
       <p>{{user.name}}</p>
       <hr>
-      <h4>Activity area</h4>
+      <h4>活動エリア</h4>
       <hr>
-      <p>東京・神奈川</p>
-      <p>internet only: OK</p>
+      <div ng-repeat="area in user.area">
+        <p>・{{area.area_name}}</p>
+      </div>
       <hr>
       <h4>依頼料</h4>
       <hr>
-      <p>Free</p>
+      <p>1,000 ポイント 〜</p>
     </div>
   </div>
   <hr>
-  <h4>できること</h4>
-  <hr>
-  <p>エレキギター</p>
-  <span class="glyphicon glyphicon-star"></span>
-  <span class="glyphicon glyphicon-star"></span>
-  <span class="glyphicon glyphicon-star"></span>
-  <span class="glyphicon glyphicon-star"></span>
-  <span class="glyphicon glyphicon-star"></span>
-  <br>
-  <br>
-  <p>フォークギター</p>
-  <span class="glyphicon glyphicon-star"></span>
-  <span class="glyphicon glyphicon-star"></span>
-  <span class="glyphicon glyphicon-star"></span>
-  <span class="glyphicon glyphicon-star"></span>
-  <span class="glyphicon glyphicon-star-empty"></span>
-  <br>
-  <br>
-  <p>ベース</p>
-  <span class="glyphicon glyphicon-star"></span>
-  <span class="glyphicon glyphicon-star-empty"></span>
-  <span class="glyphicon glyphicon-star-empty"></span>
-  <span class="glyphicon glyphicon-star-empty"></span>
-  <span class="glyphicon glyphicon-star-empty"></span>
+  <acme-skillset></acme-skillset>
   <hr>
   <h4>自己紹介</h4>
   <hr>
-  <p>あいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほあいうえおｆだｓふぁｓｆだｓ>あいうえおかき<br>
-  あいうえおあいうえおかきくけこさしすせそ<br><br>
-  http://www.yahoo.co.jp
-  <br>
-  あいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほまみむめも<br>
+  {{user.description}}
   <br>
   <br>
   </p>
