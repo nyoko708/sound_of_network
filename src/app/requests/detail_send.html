@@ -7,14 +7,38 @@
   <div class="container col-lg-9 col-md-9 col-sm-6 main-section">
     <h3>あなたが送った依頼</h3>
     <hr>
-    既読ステータス：{{request.readStatus}}<br>
-    ステータス：
-    <div class="well" ng-show="request.response">{{request.responseStatus}}</div>
+    <div class="well well-sm">To: {{request.toUserId}}さんへ依頼しました</div>
     <hr>
-    <p>{{request.toUserId}}さんへ依頼しました</p>
-    <p><b>From:</b> {{request.fromUserId}}</p>
-    <p><b>Message:</b></p>
-    <span>{{request.message}}</span>
+    <div class="row">
+      <div class="col-md-3">
+        <div class="panel panel-success">
+          <div class="panel-heading">
+            <h3 class="panel-title">既読・未読</h3>
+          </div>
+          <div class="panel-body">
+            {{request.readStatus}}
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="panel panel-danger">
+          <div class="panel-heading">
+            <h3 class="panel-title">承認・否認</h3>
+          </div>
+          <div class="panel-body">
+            <div ng-hide="request.response">未定</div>
+            <div ng-show="request.response">{{request.responseStatus}}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <div class="panel panel-default">
+      <div class="panel-heading">From: {{request.fromUserId}}</div>
+      <div class="panel-body">
+        {{request.message}}
+      </div>
+    </div>
   </div>
 </div>
 

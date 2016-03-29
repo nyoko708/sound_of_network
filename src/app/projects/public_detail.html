@@ -5,22 +5,106 @@
   </div>
 
   <h3>{{project.name}}</h3>
+  {{project.description}}
   <hr>
   <button type="button" class="btn btn-warning" ng-click="">参加したい</button>
   <button type="button" class="btn btn-info" ng-click="">いいね!</button>
   <hr>
-  <p>説明</p>
-  {{project.description}}
+  <div class="row">
+    <div class="col-md-3">
+      <div class="panel panel-success">
+        <div class="panel-heading">
+          <h3 class="panel-title">達成度</h3>
+        </div>
+        <div class="panel-body">
+          50%-
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="panel panel-info">
+        <div class="panel-heading">
+          <h3 class="panel-title">いいね数</h3>
+        </div>
+        <div class="panel-body">
+          {{project.good_sum}}
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="panel panel-warning">
+        <div class="panel-heading">
+          <h3 class="panel-title">メンバー数</h3>
+        </div>
+        <div class="panel-body">
+          1
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="panel panel-danger">
+        <div class="panel-heading">
+          <h3 class="panel-title">資金</h3>
+        </div>
+        <div class="panel-body">
+          0 ポイント
+        </div>
+      </div>
+    </div>
+  </div>
   <hr>
-  <p>ゴール</p>
-  {{project.goal_description}}
-  <hr>
-  <p>メンバー</p>
-  test01,test02,test03,test04
-  <hr>
-  <p>アクセス</p>
-  {{project.access}}
-  <hr>
-  <p>いいね数</p>
-  {{project.good_sum}}
+  <div class="row">
+    <div class="col-md-6">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h1 class="panel-title">ゴール</h1>
+        </div>
+        <div class="panel-body">
+          <div class="row">
+            <div class="col-md-12">{{project.goal_description}}</div>
+          </div>
+          <br>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="progress">
+                <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                  60%
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">参加メンバー</h3>
+        </div>
+        <div class="panel-body">
+          <div class="row">
+            <div class="col-md-3">
+              <img ng-src="assets/images/angular.png" alt="name" class="img-circle">
+              <p>testuser001</p>
+            </div>
+            <div class="col-md-3">
+              <img ng-src="assets/images/angular.png" alt="name" class="img-circle">
+              <p>testuser002</p>
+            </div>
+            <div class="col-md-3">
+              <img ng-src="assets/images/angular.png" alt="name" class="img-circle">
+              <p>testuser003</p>
+            </div>
+            <div class="col-md-3">
+              <img ng-src="assets/images/angular.png" alt="name" class="img-circle">
+              <p>testuser003</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6"><p>もっと見る...</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

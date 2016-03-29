@@ -12,18 +12,22 @@
     <ul class="list-group">
       <li class="list-group-item" ng-repeat="project in mypage.projects"><a href="#/project/detail/{{project.id}}">{{project.name}}</a></li>
     </ul>
-    <h4><span class="glyphicon glyphicon-music link-section-icon color-orange"></span>　
+    <div class="row">
+      <div class="col-md-6">
+        <h4><span class="glyphicon glyphicon-music link-section-icon color-orange"></span>　
 あなたに来ている依頼</h4>
-    <ul class="list-group">
-      <li class="list-group-item" ng-repeat="res in mypage.receiveRequests"><a href="/#/request/detail/recive/{{res.requests_id}}">{{res.name}}さんからあなたへの依頼が来ています</a></li>
-    </ul>
-    <hr>
-    <h4><span class="glyphicon glyphicon-music link-section-icon color-orange"></span>　
+        <ul class="list-group">
+          <li class="list-group-item" ng-repeat="res in mypage.receiveRequests"><a href="/#/request/detail/recive/{{res.requests_id}}">{{res.name}}さんからあなたへの依頼が来ています</a></li>
+        </ul>
+      </div>
+      <div class="col-md-6">
+        <h4><span class="glyphicon glyphicon-music link-section-icon color-orange"></span>　
 あなたが送った依頼</h4>
-    <ul class="list-group">
-      <li class="list-group-item" ng-repeat="res in mypage.sendRequests"><a href="#/request/detail/send/{{res.requests_id}}">{{res.name}}さんへ依頼をしました</li>
-    </ul>
-    <hr>
+        <ul class="list-group">
+          <li class="list-group-item" ng-repeat="res in mypage.sendRequests"><a href="#/request/detail/send/{{res.requests_id}}">{{res.name}}さんへ依頼をしました</li>
+        </ul>
+      </div>
+    </div>
   </div>
 </div>
 

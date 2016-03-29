@@ -12,7 +12,7 @@
       <div class="thumbnail">
         <img class="pull-right">
         <div class="caption">
-          <p><img src="assets/images/icon_128.png" alt="sound of network icon" class="img-circle"></p>
+          <p><img src="assets/images/{{user.image_file_name}}" alt="sound of network icon" width="130" class="img-thumbnail"></p>
           <p>プロフィール画像</p>
         </div>
       </div>
@@ -33,13 +33,11 @@
       <p>1,000 ポイント 〜</p>
     </div>
   </div>
-  <hr>
-  <acme-skillset></acme-skillset>
-  <hr>
   <h4>自己紹介</h4>
   <hr>
   {{user.description}}
-  <br>
-  <br>
+  <hr>
+  <acme-skillset></acme-skillset>
+  <hr>
   </p>
 </div>

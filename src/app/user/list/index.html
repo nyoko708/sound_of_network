@@ -4,13 +4,13 @@
     <acme-navbar></acme-navbar>
   </div>
 
-  <h3>New User List</h3>
+  <h3>ユーザー一覧</h3>
   <hr>
 
   <div class="row">
     <div class="col-sm-6 col-md-4" ng-repeat="user in userlist.users">
       <div class="thumbnail">
-        <img class="pull-right" ng-src="assets/images/gulp.png" alt="abcdefg">
+        <img class="pull-right" ng-src="assets/images/{{user.image_file_name}}" alt="abcdefg">
         <div class="caption">
           <h3>{{user.name}}</h3>
           <p>{{user.description}}</p>

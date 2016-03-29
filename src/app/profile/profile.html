@@ -5,7 +5,7 @@
     <acme-sidebar></acme-sidebar>
   </div>
   <div class="container col-lg-9 col-md-9 col-sm-6 main-section">
-    <h3>プロファイル</h3>
+    <h3>自分のプロフィール</h3>
     <p class="text-right"><a href="/profile/edit">edit</a></p>
     <hr>
     <div class="row">
@@ -13,7 +13,7 @@
         <div class="thumbnail">
           <img class="pull-right">
           <div class="caption">
-            <p><img src="assets/images/icon_128.png" alt="sound of network icon" class="img-circle"></p>
+            <p><img src="assets/images/{{user.image_file_name}}" width="130" alt="sound of network icon" class="img-thumbnail"></p>
             <p>プロフィール画像</p>
           </div>
         </div>
@@ -35,17 +35,15 @@
       </div>
     </div>
     <hr>
+    <h4>自己紹介</h4>
+    <hr>
+    <p>{{user.description}}</p>
+    <hr>
     <h4>自分の持っているポイント</h4>
     <p>0 point</p>
     <hr>
     <acme-skillset></acme-skillset>
     <hr>
-    <h4>自己紹介</h4>
-    <hr>
-    <p>{{user.description}}</p>
-    <br>
-    <br>
-    </p>
   </div>
 </div>
 

@@ -33,7 +33,9 @@
       var userInfo = null;
       var isLogin = function() {
         userInfo = authentication.getUserInfo();
+        console.log(userInfo);
         $scope.user.name = userInfo.name;
+        $scope.user.image = userInfo.image_file_name;
       }
 
       // ログインしていなかったら

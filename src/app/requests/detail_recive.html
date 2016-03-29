@@ -11,9 +11,12 @@
     <button type="button" ng-hide="request.response" class="btn btn-danger" ng-click="response(2)">否認する</button>
     <div class="well" ng-show="request.response">{{request.responseStatus}}</div>
     <hr>
-    <p><b>{{request.fromUserId}}</b>さんからあなたへ依頼がきました</p>
-    <p><b>Message:</b></p>
-    <span>{{request.message}}</span>
+    <div class="panel panel-primary">
+      <div class="panel-heading"><b>{{request.fromUserId}}</b>さんからあなたへ依頼がきました</div>
+      <div class="panel-body">
+        {{request.message}}
+      </div>
+    </div>
   </div>
 </div>
 

@@ -5,7 +5,7 @@
     <acme-sidebar></acme-sidebar>
   </div>
   <div class="container col-lg-9 col-md-9 col-sm-6 main-section">
-    <h3>Projects</h3>
+    <h3>自分が参加しているプロジェクト</h3>
     <button ng-click="go('/project/create')" class="btn btn-warning pull-right" style="margin-bottom:20px">Create Project</button>
     <hr style="clear:right">
     <div class="panel panel-primary" ng-repeat="project in projects.projects">
@@ -17,9 +17,8 @@
         進捗状況：50%<br>
         公開/非公開：公開{{project.access}}<br>
         応援された数：{{project.good_sum}}<br>
-        集めたお金： 100,000ポイント<br>
-        参加メンバー：abscsdafa, adfasfasfaf, asdfadfa...<br>
-        <a href="#/project/detail/{{project.id}}">detail</a>
+        参加メンバー：testuset001, testuser002, testuset003...<br>
+        <a href="#/project/detail/{{project.id}}">プロジェクト詳細</a>
       </div>
     </div>
   </div>
