@@ -11,6 +11,7 @@
 
     $scope.project = {};
     $scope.project_members = {};
+    $scope.project_members_allcount = {};
 
     var token = localStorage.getItem('id_token');
     var api = 'http://' + apihost + '/api/project/' + $stateParams.projectId;
@@ -31,7 +32,8 @@
                       'Content-Type' : 'application/json; charset=UTF-8'
                     }})
     .success(function(data) {
-      $scope.project_members = data.project_members;
+      $scope.project_members = data.project_members.members;
+      $scope.project_members_allcount = data.project_members.allcount;
     })
     .error(function(data, status) {
     });

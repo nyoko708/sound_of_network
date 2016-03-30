@@ -4,40 +4,73 @@
     <acme-navbar></acme-navbar>
   </div>
 
-  <h3>User Profile</h3>
+  <h3>プロフィール詳細</h3>
   <button type="button" class="btn btn-warning" ng-click="sendRequest('/request/create')">依頼する</button>
   <hr>
   <div class="row">
-    <div class="col-sm-6 col-md-4">
-      <div class="thumbnail">
-        <img class="pull-right">
-        <div class="caption">
-          <p><img src="assets/images/{{user.image_file_name}}" alt="sound of network icon" width="130" class="img-thumbnail"></p>
-          <p>プロフィール画像</p>
+    <div class="col-md-4">
+      <center>
+        <p><img src="assets/images/{{user.image_file_name}}" width="130" alt="sound of network icon" class="img-thumbnail"></p>
+        <p>プロフィール画像</p>
+      </center>
+    </div>
+    <div class="col-md-8">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">自己紹介</h3>
+        </div>
+        <div class="panel-body">
+          {{user.description}}
         </div>
       </div>
     </div>
-    <div class="col-sm-6 col-md-4">
-      <h4>名前</h4>
-      <hr>
-      <p>{{user.name}}</p>
-      <hr>
-      <h4>活動エリア</h4>
-      <hr>
-      <div ng-repeat="area in user.area">
-        <p>・{{area.area_name}}</p>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="panel panel-success">
+        <div class="panel-heading">
+          <h3 class="panel-title">名前</h3>
+        </div>
+        <div class="panel-body">
+          {{user.name}}
+        </div>
       </div>
-      <hr>
-      <h4>依頼料</h4>
-      <hr>
-      <p>1,000 ポイント 〜</p>
+    </div>
+    <div class="col-md-6">
+      <div class="panel panel-info">
+        <div class="panel-heading">
+          <h3 class="panel-title">設定している依頼料</h3>
+        </div>
+        <div class="panel-body">
+          Free
+        </div>
+      </div>
     </div>
   </div>
-  <h4>自己紹介</h4>
   <hr>
-  {{user.description}}
-  <hr>
-  <acme-skillset></acme-skillset>
-  <hr>
-  </p>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">活動エリア</h3>
+        </div>
+        <div class="panel-body">
+          <div ng-repeat="area in user.area">
+            <p>・{{area.area_name}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">スキルセット</h3>
+        </div>
+        <div class="panel-body">
+          <acme-skillset></acme-skillset>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

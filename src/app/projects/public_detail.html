@@ -37,7 +37,7 @@
           <h3 class="panel-title">メンバー数</h3>
         </div>
         <div class="panel-body">
-          1
+          {{project_members_allcount}}
         </div>
       </div>
     </div>
@@ -83,21 +83,9 @@
         </div>
         <div class="panel-body">
           <div class="row">
-            <div class="col-md-3">
-              <img ng-src="assets/images/angular.png" alt="name" class="img-circle">
-              <p>testuser001</p>
-            </div>
-            <div class="col-md-3">
-              <img ng-src="assets/images/angular.png" alt="name" class="img-circle">
-              <p>testuser002</p>
-            </div>
-            <div class="col-md-3">
-              <img ng-src="assets/images/angular.png" alt="name" class="img-circle">
-              <p>testuser003</p>
-            </div>
-            <div class="col-md-3">
-              <img ng-src="assets/images/angular.png" alt="name" class="img-circle">
-              <p>testuser003</p>
+            <div class="col-md-3" ng-repeat="member in project_members">
+              <img ng-src="assets/images/{{member.image_file_name}}" width="50px" alt="name" class="img-circle">
+              <p><a href="#/user/detail/{{member.id}}">{{member.name}}</a></p>
             </div>
           </div>
           <div class="row">
